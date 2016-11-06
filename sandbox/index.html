@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="SandboxApp">
+    <head>
+        <title>Lunch Checker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+        <style>
+         .message { font-size: 1.3em; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+      <div ng-controller="CategoriesController as ctrl">
+        <div ng-repeat="c in ctrl.categories">
+          <a href="" ng-click="ctrl.getDishes(c.short_name)">({{c.short_name}})</a> has name of {{c.name}}
+        </div>
+
+        <br/>
+        <div ng-repeat="c in ctrl.dishes">
+          <span ng-click="ctrl.dishes">({{c.short_name}})</span> has name of {{c.name}}
+        </div>
+      </div>
+    </body>
+</html>
