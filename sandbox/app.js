@@ -4,7 +4,7 @@
         .module('SandboxApp', [])
         .controller('CategoriesController', CategoriesController)
         .service('CategoriesService', CategoriesService)
-        .constant('baseUrl', 'http://davids-restaurant.herokuapp.com/');
+        .constant('baseUrl', 'http://davids-restaurant.herokuapp.com');
 
 
 
@@ -61,8 +61,6 @@
                     dishes = response.data.menu_items
                 });
         };
-
-
     }
 
 

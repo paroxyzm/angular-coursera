@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="NarrowItDownApp">
+<head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body ng-controller="NarrowItDownController as ctrl">
+<div class="container">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+    <div class="row">
+        <input type="text" placeholder="search term" class="form-control" ng-model="ctrl.searchTerm">
+        <div class="form-group narrow-button">
+            <button class="btn btn-primary" ng-click="ctrl.narrow()">Narrow It Down For Me!</button>
+        </div>
+    </div>
+
+    <!-- found-items should be implemented as a component -->
+    <found-items found-items="ctrl.found" on-remove="ctrl.remove(index)"></found-items>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.22.1/ramda.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

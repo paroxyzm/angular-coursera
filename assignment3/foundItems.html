@@ -1,0 +1,31 @@
+<ol>
+
+    <table ng-if="ctrl.found.length > 0" class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Short Name</th>
+            <th>Description</th>
+            <th> </th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr ng-repeat="item in ctrl.found">
+            <td>{{$index +1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.short_name}}</td>
+            <td>{{item.description}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="ctrl.onRemove({index: $index})"> Don't want this one!</button>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</ol>
+
+<div ng-if="ctrl.found.length === 0 ">Nothing found</div>
