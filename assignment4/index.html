@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Restaurane Menu - Assignment 4</title>
+</head>
+
+<body>
+    <h1>Welcome to our Restaurant</h1>
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/categories.controller.js"></script>
+    <script src="src/items.controller.js"></script>
+
+    <!-- Services -->
+    <script src="src/menudata.service.js"></script>
+
+    <!-- Components -->
+    <script src="src/categories.component.js"></script>
+    <script src="src/items.component.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+</body>
+
+</html>
