@@ -39,7 +39,7 @@
 
         <span ng-if="formCtrl.itemError">{{formCtrl.itemError}}</span><br />
 
-        <input type="submit" ng-click="formCtrl.submit()" value="Save" />
+        <button class="btn btn-default" ng-click="formCtrl.submit()" type="button" ng-disabled="signUpForm.$invalid">Sign Up!</button>
 
         <br/>
         <div ng-show="formCtrl.user.registered"> Your information has been saved </div>
