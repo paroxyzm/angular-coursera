@@ -1,0 +1,49 @@
+<!--
+  Include stylesheet specific to the public site
+-->
+
+<div id="form">
+    <form name="signUpForm" novalidate>
+        <input type="text"
+               name="firstName"
+               placeholder="First Name"
+               ng-model="formCtrl.user.firstName"
+               required /><br />
+        <span ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">First Name is required</span><br />
+
+        <input type="text"
+               name="lastName"
+               placeholder="Last Name"
+               ng-model="formCtrl.user.lastName"
+               required/><br />
+        <span ng-if="signUpForm.lastName.$invalid && signUpForm.lastName.$touched">Last Name is required</span><br />
+
+        <input type="email"
+               name="email"
+               placeholder="Email"
+               ng-model="formCtrl.user.email"
+               required/><br />
+        <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">Email is required</span><br />
+
+        <input type="text"
+               name="tel"
+               ng-model="formCtrl.user.tel"
+               placeholder="phone, eg. 111-222-333"
+               pattern="\d{3}-\d{3}-\d{3}"
+               required/><br />
+        <span ng-if="signUpForm.tel.$invalid && signUpForm.tel.$touched">Phone number is required. eg. 555-333-333 </span><br />
+
+        <input type="text"
+               placeholder="favorite dish"
+               ng-model="formCtrl.user.favoriteDish.short_name" /><br />
+
+        <span ng-if="formCtrl.itemError">{{formCtrl.itemError}}</span><br />
+
+        <input type="submit" ng-click="formCtrl.submit()" value="Save" />
+
+        <br/>
+        <div ng-show="formCtrl.user.registered"> Your information has been saved </div>
+
+    </form>
+
+</div>

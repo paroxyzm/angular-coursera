@@ -1,0 +1,31 @@
+<h1 ng-if="!infoCtrl.user.registered">
+    {{infoCtrl.welcome}} <a ui-sref="public.signUp"> Sign up Now! </a></h1>
+
+<div ng-if="infoCtrl.user.registered">
+
+    User Info:
+
+    <br/>
+    <label> User First Name: {{infoCtrl.user.firstName}}</label>
+    <br/>
+
+    <br/>
+    <label> User Last Name: {{infoCtrl.user.lastName}}</label>
+    <br/>
+
+    <br/>
+    <label> User Email: {{infoCtrl.user.email}}</label>
+    <br/>
+
+    <br/>
+    <label> User Phone: {{infoCtrl.user.tel}}</label>
+    <br/>
+
+    <img alt="Cat" ng-src="images/menu/{{infoCtrl.user.favoriteDish.category_short_name}}/{{infoCtrl.user.favoriteDish.category_short_name}}.jpg" />
+
+    <br/>
+    <label> Name: {{infoCtrl.user.favoriteDish.name}}</label>
+    <br/>
+    <label> Description: {{infoCtrl.user.favoriteDish.description}}</label>
+
+</div>

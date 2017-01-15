@@ -17,7 +17,7 @@
                 });
         };
 
-        self.getItemsForCategory = function (categoryShortName) {
+ -       self.getItemsForCategory = function (categoryShortName) {
             return $http
                 .get(baseUrl + '/menu_items.json', {
                     params: {category: categoryShortName}
